@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body, html{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header{
+    background-color: grey;
+    opacity: 0.8;
+    height: 4rem;
+}
+
+.container{
+    background-image: url("https://i.pinimg.com/originals/15/f6/a3/15f6a3aac562ee0fadbbad3d4cdf47bc.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+h1{
+    color: white;
+    font-size: 4rem;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+
+.invisible{
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+}
+.svg{
+    width: 50px;
+}
+
+.toggleSlide, .offSlide{
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    background-color: hsl(11, 0%, 40%, 80%);
+    list-style: none;
+    height: 100%;
+    width: 20rem;
+    align-items: center;
+    row-gap: 10px;
+    font-size: large;
+    color: white;
+    font-weight: 700;
+
+}
+
+.List{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.toggleSlide{
+  transition: translate 1s ease-out;
+  translate: 0%;
+}
+.offSlide{
+    transition: translate 1s ease-in;
+    translate: -100%;
+}
+.offToggler{
+    display:none
+}
+
+
+@media only screen and (max-width: 686px) {
+    .container{
+        background-size: auto 100vh;
+        background-position: center;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
